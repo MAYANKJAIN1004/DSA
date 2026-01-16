@@ -1,6 +1,7 @@
 #include<iostream>
 #include"Account.h"
 #include"Savings.h"
+#include"Checking.h"
 
 using namespace std;
 
@@ -8,6 +9,11 @@ int main()
 {
     cout<<"Inside Main!\n";
 
+    Checking chk("Mayank Jain",1000);
+    cout<<"chk Balance : "<<chk.GetBalance()<<endl;
+    chk.Withdrow(500);
+    cout<<"chk Balance : "<<chk.GetBalance()<<endl;
+/*
     Savings sav("Mayank Jain",1000,10.0);
 
     cout<<"sav Name : "<<sav.GetName()<<endl;
@@ -43,5 +49,6 @@ int main()
 
     cout<<"Acc1 Balance : "<<acc1.GetBalance()<<endl;
     cout<<"Acc Balance : "<<acc.GetBalance()<<endl;
+*/
     return 0;
 }
