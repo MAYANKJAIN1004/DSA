@@ -11,7 +11,7 @@ Checking::~Checking(){
 }
 
 void Checking::Withdrow(float amount){
-    cout<<"InSide Checking::Withdrow and amount = "<<amount<<" and Balance = "<<m_Balance<<endl;
+    cout<<"InSide Checking::Withdrow\n";// and amount = "<<amount<<" and Balance = "<<m_Balance<<endl;
     if((m_Balance-amount) > 100)
         Account::Withdrow(amount);
     else

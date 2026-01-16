@@ -24,7 +24,9 @@ int Account::GetAccountNo() const{
     return m_AccNo;
 }
 
-void Account::AccumulateInterest(){}
+void Account::AccumulateInterest(){
+    cout<<"InSide Account::AccumulateInterest()\n";
+}
 void Account::Withdrow(float amount){
     if(amount<m_Balance)
         m_Balance -=amount;
@@ -35,5 +37,6 @@ void Account::Deposit(float amount){
     m_Balance += amount;
 }
 float Account::GetInterestRate() const{
+    cout<<"InSide Account::GetInterestRate()\n";
     return 0.0f;
 }

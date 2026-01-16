@@ -2,6 +2,7 @@
 #include"Account.h"
 #include"Savings.h"
 #include"Checking.h"
+#include"Transaction.h"
 
 using namespace std;
 
@@ -9,13 +10,15 @@ int main()
 {
     cout<<"Inside Main!\n";
 
+    Savings sav("Mayank",1000,10.0f);
+    Transact(&sav);
+
+/*
     Checking chk("Mayank Jain",1000);
     cout<<"chk Balance : "<<chk.GetBalance()<<endl;
     chk.Withdrow(500);
     cout<<"chk Balance : "<<chk.GetBalance()<<endl;
-/*
     Savings sav("Mayank Jain",1000,10.0);
-
     cout<<"sav Name : "<<sav.GetName()<<endl;
     cout<<"sav No : " <<sav.GetAccountNo()<<endl;
     cout<<"sav Balance : "<<sav.GetBalance()<<endl;

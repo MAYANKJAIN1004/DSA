@@ -17,8 +17,8 @@ class Account{
         float GetBalance() const;
         int GetAccountNo() const;
 
-        void AccumulateInterest();
-        void Withdrow(float);
+        virtual void AccumulateInterest();
+        virtual void Withdrow(float);
         void Deposit(float);
-        float GetInterestRate() const;
+        virtual float GetInterestRate() const;
 };
