@@ -10,10 +10,26 @@ int main()
 {
     cout<<"Inside Main!\n";
 
-    Savings sav("Mayank",1000,10.0f);
-    Transact(&sav);
+    Checking chk ("Mayank Jain",1000,100);
+    //Savings sav ("Mayank Jain",1000,10.0f);
+    try{
+        //Transact(sav);
+        Transact(chk);
+    }catch(exception &ex){
+        cout<<"Exception : "<<ex.what()<<endl;
+    }
+    
+    //cout<<"Min Balance is : "<<chk.GetMinBalance()<<endl;
 
 /*
+    Account *acc = new Savings("Mayank Jain",1000,10.0f);
+    //acc->SizeOfAccount();
+    //cout<<"Size of Pointer : "<<sizeof(acc)<<endl;
+    //cout<<"Size Of Account Class : "<<sizeof(Account)<<endl;
+    delete acc;
+
+    Savings sav("Mayank",1000,10.0f);
+    Transact(&sav);
     Checking chk("Mayank Jain",1000);
     cout<<"chk Balance : "<<chk.GetBalance()<<endl;
     chk.Withdrow(500);
@@ -53,5 +69,6 @@ int main()
     cout<<"Acc1 Balance : "<<acc1.GetBalance()<<endl;
     cout<<"Acc Balance : "<<acc.GetBalance()<<endl;
 */
+    cout<<"Main - Exit!\n";
     return 0;
 }

@@ -8,7 +8,9 @@ private:
 protected:
 public:
     using Account::Account;
-    //Checking(const std::string &name,float balance);
+    Checking(const std::string &name,float balance, float minbalance);
+
     ~Checking();
-    void Withdrow(float amount);
+    void Withdrow(float amount) override;
+    float GetMinBalance() const;
 };
